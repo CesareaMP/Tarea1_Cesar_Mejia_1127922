@@ -720,8 +720,33 @@ private: System::Void bttnrecurpalin_Click(System::Object^ sender, System::Event
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ palabras;
 		palabras = txtiterapalin->Text;
-		lbliterapali->Text = Convert::ToString(palabras->Split(',')[0]);
+		lbliterapali->Text = Convert::ToString(iterapalindromas(palabras));
 	}
+		   static int iterapalindromas(String^ p) {
+			   int totalpalin = 0, contadorsplit = 0, posinicial, posfinal, contadorfor = 0;
+			   String^ palactual;
+			   for (contadorsplit = 0; contadorsplit <= p->Split(',')->Length - 1; contadorsplit++)
+			   {				  
+				   palactual = p->Split(',')[contadorsplit];
+				   posinicial = 0;
+				   posfinal = palactual->Length - 1;
+				   contadorfor = 0;
+				   for (int i = 0; i < palactual->Length-1; i++)
+				   {
+					   if (palactual[posinicial]==palactual[posfinal])
+					   {						   						   
+						   posinicial++;
+						   posfinal--;
+						   contadorfor++;
+					   }					  
+				   }
+				   if (contadorfor==(palactual->Length-1))
+				   {
+					   totalpalin++;
+				   }
+			   }
+			   return totalpalin;
+		   }
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void bttnrecubases_Click(System::Object^ sender, System::EventArgs^ e) {
