@@ -4,6 +4,7 @@
 #include <math.h>
 #include <conio.h>
 using std::string;
+using System::String;
 namespace Tarea1CesarMejia1127922 {
 
 	using namespace System;
@@ -64,7 +65,8 @@ namespace Tarea1CesarMejia1127922 {
 
 	private: System::Windows::Forms::Label^ lblitecando;
 	private: System::Windows::Forms::Label^ RECURSIVO;
-	private: System::Windows::Forms::Label^ lblrecurresult;
+	private: System::Windows::Forms::Label^ lblrecupalin;
+
 
 	private: System::Windows::Forms::Label^ txtrecursiva;
 	private: System::Windows::Forms::Label^ lbliterapali;
@@ -100,6 +102,10 @@ namespace Tarea1CesarMejia1127922 {
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::TextBox^ txtiteraorigen;
 	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ txtiterapalin;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::TextBox^ txtrecupalin;
+	private: System::Windows::Forms::Label^ label7;
 
 	private:
 		/// <summary>
@@ -135,10 +141,18 @@ namespace Tarea1CesarMejia1127922 {
 			this->lbliterapali = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->lbliterativa = (gcnew System::Windows::Forms::Label());
-			this->lblrecurresult = (gcnew System::Windows::Forms::Label());
+			this->lblrecupalin = (gcnew System::Windows::Forms::Label());
 			this->bttnrecurpalin = (gcnew System::Windows::Forms::Button());
 			this->txtrecursiva = (gcnew System::Windows::Forms::Label());
 			this->BASES = (gcnew System::Windows::Forms::TabPage());
+			this->lbliteraresultbases = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->txtiteranumero = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->txtiteradestino = (gcnew System::Windows::Forms::TextBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->txtiteraorigen = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->lblrecufinal = (gcnew System::Windows::Forms::Label());
 			this->bttnrecubases = (gcnew System::Windows::Forms::Button());
@@ -149,14 +163,10 @@ namespace Tarea1CesarMejia1127922 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->txtrecuborigen = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->lbliteraresultbases = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->txtiteranumero = (gcnew System::Windows::Forms::TextBox());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->txtiteradestino = (gcnew System::Windows::Forms::TextBox());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->txtiteraorigen = (gcnew System::Windows::Forms::TextBox());
-			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->txtrecupalin = (gcnew System::Windows::Forms::TextBox());
+			this->txtiterapalin = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->SUMAS->SuspendLayout();
 			this->PALABRAS->SuspendLayout();
@@ -321,11 +331,15 @@ namespace Tarea1CesarMejia1127922 {
 			// 
 			// PALABRAS
 			// 
+			this->PALABRAS->Controls->Add(this->txtiterapalin);
+			this->PALABRAS->Controls->Add(this->label11);
+			this->PALABRAS->Controls->Add(this->txtrecupalin);
+			this->PALABRAS->Controls->Add(this->label7);
 			this->PALABRAS->Controls->Add(this->label1);
 			this->PALABRAS->Controls->Add(this->lbliterapali);
 			this->PALABRAS->Controls->Add(this->button1);
 			this->PALABRAS->Controls->Add(this->lbliterativa);
-			this->PALABRAS->Controls->Add(this->lblrecurresult);
+			this->PALABRAS->Controls->Add(this->lblrecupalin);
 			this->PALABRAS->Controls->Add(this->bttnrecurpalin);
 			this->PALABRAS->Controls->Add(this->txtrecursiva);
 			this->PALABRAS->Location = System::Drawing::Point(4, 25);
@@ -349,16 +363,16 @@ namespace Tarea1CesarMejia1127922 {
 			// lbliterapali
 			// 
 			this->lbliterapali->AutoSize = true;
-			this->lbliterapali->Location = System::Drawing::Point(246, 256);
+			this->lbliterapali->Location = System::Drawing::Point(181, 409);
 			this->lbliterapali->Name = L"lbliterapali";
 			this->lbliterapali->Size = System::Drawing::Size(0, 16);
 			this->lbliterapali->TabIndex = 5;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(24, 217);
+			this->button1->Location = System::Drawing::Point(24, 385);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(167, 94);
+			this->button1->Size = System::Drawing::Size(132, 65);
 			this->button1->TabIndex = 4;
 			this->button1->Text = L"DETERMINAR PALINDROMAS";
 			this->button1->UseVisualStyleBackColor = true;
@@ -367,25 +381,25 @@ namespace Tarea1CesarMejia1127922 {
 			// lbliterativa
 			// 
 			this->lbliterativa->AutoSize = true;
-			this->lbliterativa->Location = System::Drawing::Point(21, 198);
+			this->lbliterativa->Location = System::Drawing::Point(21, 261);
 			this->lbliterativa->Name = L"lbliterativa";
 			this->lbliterativa->Size = System::Drawing::Size(77, 16);
 			this->lbliterativa->TabIndex = 3;
 			this->lbliterativa->Text = L"ITERATIVA";
 			// 
-			// lblrecurresult
+			// lblrecupalin
 			// 
-			this->lblrecurresult->AutoSize = true;
-			this->lblrecurresult->Location = System::Drawing::Point(246, 98);
-			this->lblrecurresult->Name = L"lblrecurresult";
-			this->lblrecurresult->Size = System::Drawing::Size(0, 16);
-			this->lblrecurresult->TabIndex = 2;
+			this->lblrecupalin->AutoSize = true;
+			this->lblrecupalin->Location = System::Drawing::Point(181, 179);
+			this->lblrecupalin->Name = L"lblrecupalin";
+			this->lblrecupalin->Size = System::Drawing::Size(0, 16);
+			this->lblrecupalin->TabIndex = 2;
 			// 
 			// bttnrecurpalin
 			// 
-			this->bttnrecurpalin->Location = System::Drawing::Point(24, 59);
+			this->bttnrecurpalin->Location = System::Drawing::Point(24, 154);
 			this->bttnrecurpalin->Name = L"bttnrecurpalin";
-			this->bttnrecurpalin->Size = System::Drawing::Size(167, 94);
+			this->bttnrecurpalin->Size = System::Drawing::Size(132, 67);
 			this->bttnrecurpalin->TabIndex = 1;
 			this->bttnrecurpalin->Text = L"DETERMINAR PALINDROMAS";
 			this->bttnrecurpalin->UseVisualStyleBackColor = true;
@@ -426,6 +440,72 @@ namespace Tarea1CesarMejia1127922 {
 			this->BASES->TabIndex = 2;
 			this->BASES->Text = L"BASES";
 			this->BASES->UseVisualStyleBackColor = true;
+			// 
+			// lbliteraresultbases
+			// 
+			this->lbliteraresultbases->AutoSize = true;
+			this->lbliteraresultbases->Location = System::Drawing::Point(25, 403);
+			this->lbliteraresultbases->Name = L"lbliteraresultbases";
+			this->lbliteraresultbases->Size = System::Drawing::Size(0, 16);
+			this->lbliteraresultbases->TabIndex = 17;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(303, 249);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(159, 78);
+			this->button2->TabIndex = 16;
+			this->button2->Text = L"CALCULAR";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			// 
+			// txtiteranumero
+			// 
+			this->txtiteranumero->Location = System::Drawing::Point(240, 366);
+			this->txtiteranumero->Name = L"txtiteranumero";
+			this->txtiteranumero->Size = System::Drawing::Size(100, 22);
+			this->txtiteranumero->TabIndex = 15;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(25, 366);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(207, 16);
+			this->label8->TabIndex = 14;
+			this->label8->Text = L"Ingrese el número en base origen";
+			// 
+			// txtiteradestino
+			// 
+			this->txtiteradestino->Location = System::Drawing::Point(172, 325);
+			this->txtiteradestino->Name = L"txtiteradestino";
+			this->txtiteradestino->Size = System::Drawing::Size(100, 22);
+			this->txtiteradestino->TabIndex = 13;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(25, 328);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(147, 16);
+			this->label9->TabIndex = 12;
+			this->label9->Text = L"Ingrese la base destino";
+			// 
+			// txtiteraorigen
+			// 
+			this->txtiteraorigen->Location = System::Drawing::Point(172, 287);
+			this->txtiteraorigen->Name = L"txtiteraorigen";
+			this->txtiteraorigen->Size = System::Drawing::Size(100, 22);
+			this->txtiteraorigen->TabIndex = 11;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(25, 290);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(141, 16);
+			this->label10->TabIndex = 10;
+			this->label10->Text = L"Ingrese la base origen";
 			// 
 			// label6
 			// 
@@ -512,71 +592,39 @@ namespace Tarea1CesarMejia1127922 {
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Ingrese la base origen";
 			// 
-			// lbliteraresultbases
+			// label7
 			// 
-			this->lbliteraresultbases->AutoSize = true;
-			this->lbliteraresultbases->Location = System::Drawing::Point(25, 403);
-			this->lbliteraresultbases->Name = L"lbliteraresultbases";
-			this->lbliteraresultbases->Size = System::Drawing::Size(0, 16);
-			this->lbliteraresultbases->TabIndex = 17;
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(21, 66);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(325, 32);
+			this->label7->TabIndex = 7;
+			this->label7->Text = L"Escriba palabras separadas por comas sin espacios\r\npara verficar la cantidad de p"
+				L"alindromas";
 			// 
-			// button2
+			// txtrecupalin
 			// 
-			this->button2->Location = System::Drawing::Point(303, 249);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(159, 78);
-			this->button2->TabIndex = 16;
-			this->button2->Text = L"CALCULAR";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			this->txtrecupalin->Location = System::Drawing::Point(24, 110);
+			this->txtrecupalin->Name = L"txtrecupalin";
+			this->txtrecupalin->Size = System::Drawing::Size(322, 22);
+			this->txtrecupalin->TabIndex = 8;
 			// 
-			// txtiteranumero
+			// txtiterapalin
 			// 
-			this->txtiteranumero->Location = System::Drawing::Point(240, 366);
-			this->txtiteranumero->Name = L"txtiteranumero";
-			this->txtiteranumero->Size = System::Drawing::Size(100, 22);
-			this->txtiteranumero->TabIndex = 15;
+			this->txtiterapalin->Location = System::Drawing::Point(24, 333);
+			this->txtiterapalin->Name = L"txtiterapalin";
+			this->txtiterapalin->Size = System::Drawing::Size(322, 22);
+			this->txtiterapalin->TabIndex = 10;
 			// 
-			// label8
+			// label11
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(25, 366);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(207, 16);
-			this->label8->TabIndex = 14;
-			this->label8->Text = L"Ingrese el número en base origen";
-			// 
-			// txtiteradestino
-			// 
-			this->txtiteradestino->Location = System::Drawing::Point(172, 325);
-			this->txtiteradestino->Name = L"txtiteradestino";
-			this->txtiteradestino->Size = System::Drawing::Size(100, 22);
-			this->txtiteradestino->TabIndex = 13;
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(25, 328);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(147, 16);
-			this->label9->TabIndex = 12;
-			this->label9->Text = L"Ingrese la base destino";
-			// 
-			// txtiteraorigen
-			// 
-			this->txtiteraorigen->Location = System::Drawing::Point(172, 287);
-			this->txtiteraorigen->Name = L"txtiteraorigen";
-			this->txtiteraorigen->Size = System::Drawing::Size(100, 22);
-			this->txtiteraorigen->TabIndex = 11;
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(25, 290);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(141, 16);
-			this->label10->TabIndex = 10;
-			this->label10->Text = L"Ingrese la base origen";
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(21, 289);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(325, 32);
+			this->label11->TabIndex = 9;
+			this->label11->Text = L"Escriba palabras separadas por comas sin espacios\r\npara verficar la cantidad de p"
+				L"alindromas";
 			// 
 			// MyForm
 			// 
@@ -648,10 +696,31 @@ private: System::Void bttniter_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void PALABRAS_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void bttnrecurpalin_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	String^ palabras;
+	palabras = txtrecupalin->Text;	
+	lblrecupalin->Text = Convert::ToString(recuvectorizacion(palabras, 0));
 }
+	   static int recuvectorizacion(String^ p, int pos) {// usé este video y páginas de referencia https://www.youtube.com/watch?v=oIqDz50_qJk https://stackoverflow.com/questions/29063239/c-using-systemstringsplit
+		   if (pos == p->Split(',')->Length)
+		   {
+			   return 0;
+		   }
+		   return recudetectarpalindromo(p->Split(',')[pos], 0, (p->Split(',')[pos]->Length - 1)) + recuvectorizacion(p, (pos + 1));
+	   }
+	   static int recudetectarpalindromo(String^ pal, int posini, int posfinal) {
+		   if (pal[posini]==pal[posfinal])
+		   {
+			   if (posini==(pal->Length-1)/2)
+			   {
+				   return 1;
+			   }			 
+			   return recudetectarpalindromo(pal, posini+1, posfinal-1);
+		   }
+	   }
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		String^ palabras;
+		palabras = txtiterapalin->Text;
+		lbliterapali->Text = Convert::ToString(palabras->Split(',')[0]);
 	}
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
